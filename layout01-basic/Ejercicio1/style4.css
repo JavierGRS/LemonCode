@@ -1,0 +1,64 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.grid-card {
+    display: grid;
+    grid-template-areas: 
+    "img"
+    "main"
+    "footer"
+    "button";
+    grid-gap: 1rem;
+    background-color: white;
+    justify-content: start;
+    padding: 20px;
+    border: 1px solid black;
+}
+
+.grid-img {
+    grid-area: img;
+    justify-self: center;
+}
+
+.grid-img img {
+    height: 20rem;
+}
+
+.grid-main {
+    grid-area: main;
+}
+
+.grid-footer {
+    grid-area: footer;
+    justify-self: end;
+}
+
+.grid-footer footer {
+    font-weight: bold;
+}
+
+.grid-button {
+    grid-area: button;
+}
+
+.grid-button button {
+    background-color: rgb(59, 172, 59);
+    font-size: medium;
+    color: white;
+    border-style: none;
+    height: 4em;
+    width: 100%;
+    cursor: auto;
+}
+
+.grid-button button:hover {
+    background-color: rgb(2, 112, 2);
+    color:black;
+}
+
+.cards {
+    background-color: rgb(204, 198, 198);
+    padding: 20px;
+}

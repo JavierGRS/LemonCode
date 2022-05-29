@@ -1,0 +1,36 @@
+.container-1 {
+  display: flex;
+  padding: 2px; }
+  .container-1 div {
+    padding: 15px;
+    margin: 4px; }
+
+.box.darken-4 {
+  background-color: #990000; }
+
+.box.darken-3 {
+  background-color: #b30000; }
+
+.box.darken-2 {
+  background-color: #cc0000; }
+
+.box.darken-1 {
+  background-color: #e60000; }
+
+.box.base-color {
+  background-color: red; }
+
+.box.lighten-4 {
+  background-color: #ff6666; }
+
+.box.lighten-3 {
+  background-color: #ff4d4d; }
+
+.box.lighten-2 {
+  background-color: #ff3333; }
+
+.box.lighten-1 {
+  background-color: #ff1a1a; }
+
+
+/*# sourceMappingURL=/style1.cb3e1a67.css.map */

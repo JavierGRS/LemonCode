@@ -1,0 +1,38 @@
+@import "red";
+
+.container-1 {
+    display: inline-flex;
+    flex-direction: column;
+    padding: 2px;
+    div {
+        padding: 15px;
+        margin: 4px;
+    }
+}
+
+.box-1 {
+    background-color: var(--base-color);
+}
+
+.box-2 {
+    background-color: var(--base-color-important);
+}
+
+.box-3 {
+    background-color: var(--base-color-warning);
+}
+
+.box-4 {
+    font-family: var(--principal-font);
+}
+
+.box-5 {
+    @include secondary-font;
+}
+
+.box-6 {
+    border: 1px solid;
+    box-shadow: var(--box-shadow);
+    border-radius: var(--border-radius);
+}
+

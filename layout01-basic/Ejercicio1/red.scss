@@ -1,0 +1,19 @@
+:root {
+    --base-color: red;
+    --base-color-important: rgb(120, 10, 10);
+    --base-color-warning: rgb(244, 118, 118);
+    --principal-font: Roboto;
+    --secondary-font: Macondo;
+    --border-radius: 10px;
+    --box-shadow: 10px 10px;
+}
+
+@mixin secondary-font {
+    font-family: Macondo;
+    font-weight: bold;
+    font-siaze: large;
+}
+
+
+
+

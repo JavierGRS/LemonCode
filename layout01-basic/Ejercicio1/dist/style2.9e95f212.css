@@ -1,0 +1,41 @@
+:root {
+  --base-color: red;
+  --base-color-important: rgb(120, 10, 10);
+  --base-color-warning: rgb(244, 118, 118);
+  --principal-font: Roboto;
+  --secondary-font: Macondo;
+  --border-radius: 10px;
+  --box-shadow: 10px 10px; }
+
+.container-1 {
+  display: inline-flex;
+  flex-direction: column;
+  padding: 2px; }
+  .container-1 div {
+    padding: 15px;
+    margin: 4px; }
+
+.box-1 {
+  background-color: var(--base-color); }
+
+.box-2 {
+  background-color: var(--base-color-important); }
+
+.box-3 {
+  background-color: var(--base-color-warning); }
+
+.box-4 {
+  font-family: var(--principal-font); }
+
+.box-5 {
+  font-family: Macondo;
+  font-weight: bold;
+  font-siaze: large; }
+
+.box-6 {
+  border: 1px solid;
+  box-shadow: var(--box-shadow);
+  border-radius: var(--border-radius); }
+
+
+/*# sourceMappingURL=/style2.9e95f212.css.map */

@@ -1,0 +1,29 @@
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(13, 134, 124);
+}
+
+.menu div {
+    padding: 20px;
+    list-style: none;
+}
+
+.item a {
+    color: white;
+    text-decoration: none;
+}
+
+.item:hover {
+    background-color: rgb(2, 2, 77);
+}
+
+@media screen and (min-width: 800px) {
+    .menu {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}

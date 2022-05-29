@@ -1,0 +1,46 @@
+@import "base";
+
+.container-1 {
+    display: flex;
+    padding: 2px;
+    div {
+        padding: 15px;
+        margin: 4px;
+    }
+}
+
+.box.darken-4 {
+    background-color: darken($color: $base-color, $amount: 20);
+}
+
+.box.darken-3 {
+    background-color: darken($color: $base-color, $amount: 15);
+}
+
+.box.darken-2 {
+    background-color: darken($color: $base-color, $amount: 10);
+}
+
+.box.darken-1 {
+    background-color: darken($color: $base-color, $amount: 5);
+}
+
+.box.base-color {
+    background-color: $base-color;
+}
+
+.box.lighten-4 {
+    background-color: lighten($color: $base-color, $amount: 20);
+}
+
+.box.lighten-3 {
+    background-color: lighten($color: $base-color, $amount: 15);
+}
+
+.box.lighten-2 {
+    background-color: lighten($color: $base-color, $amount: 10);
+}
+
+.box.lighten-1 {
+    background-color: lighten($color: $base-color, $amount: 5);
+}

@@ -63,7 +63,8 @@ function merge(source, target) {
 console.log(clone(a));
 console.log(merge(a, b));
 
-//4. Read Books
+//4. Read Books (TypeScript is not working)
+
 // interface Book {
 //     title: string;
 //     isRead: boolean;

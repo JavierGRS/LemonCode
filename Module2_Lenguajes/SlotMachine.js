@@ -17,7 +17,6 @@ class SlothMachine {
     }
 }
 
-
 const machine1 = new SlothMachine();
 machine1.play(); // "Good luck next time!!"
 machine1.play(); // "Good luck next time!!"

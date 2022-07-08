@@ -1,0 +1,1 @@
+const a: string = "this is a string";

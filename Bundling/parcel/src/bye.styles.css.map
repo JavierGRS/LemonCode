@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAEA,AAAA,aAAa,CAAC;EACZ,gBAAgB,EAHV,IAAI;CAIX",
+    "sources": [
+        "bye.styles.scss"
+    ],
+    "names": [],
+    "file": "bye.styles.css"
+}

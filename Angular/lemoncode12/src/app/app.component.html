@@ -1,0 +1,16 @@
+<!-- <h1> Lemoncode</h1> -->
+
+<!-- <app-menu></app-menu> -->
+
+
+
+<app-menu-private *ngIf="isLoggedIn"></app-menu-private>
+<app-menu-public *ngIf="!isLoggedIn"></app-menu-public>
+<div class="container">
+  <router-outlet></router-outlet>
+</div>
+<p *ngIf="isLoggedIn">Hola, {{ currentUser.username }} </p>
+
+<!-- <app-user-list></app-user-list> -->
+<!-- <app-custom-search (myEvent)="myEventListener()" (myEvent2)="myEvent2Listener()"></app-custom-search>
+<app-custom-search ph="Buscar..." (myEvent)="myEventListener()" (myEvent2)="myEvent2Listener()"></app-custom-search> -->

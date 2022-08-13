@@ -7,9 +7,10 @@
 <app-menu-private *ngIf="isLoggedIn"></app-menu-private>
 <app-menu-public *ngIf="!isLoggedIn"></app-menu-public>
 <div class="container">
-  <router-outlet></router-outlet>
+  <mat-card>
+    <router-outlet></router-outlet>
+  </mat-card>
 </div>
-<p *ngIf="isLoggedIn">Hola, {{ currentUser.username }} </p>
 
 <!-- <app-user-list></app-user-list> -->
 <!-- <app-custom-search (myEvent)="myEventListener()" (myEvent2)="myEvent2Listener()"></app-custom-search>

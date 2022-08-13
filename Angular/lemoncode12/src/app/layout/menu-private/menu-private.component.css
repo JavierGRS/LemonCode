@@ -1,0 +1,15 @@
+a  {
+  padding: 10px;
+  color: white;
+}
+
+.navbar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.navbar span {
+  padding-left: 10px;
+}
+

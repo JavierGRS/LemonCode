@@ -35,8 +35,20 @@ export class LoginComponent implements OnInit {
 
   onLoginSuccess() {
     if (this.authService.login(this.user.username, this.user.password)) {
+      this.appComponent.setIsLoggedIn(
+        true,
+        this.user.username,
+        this.user.password
+      );
       this.router.navigate(['/dashboard']);
-      this.appComponent.isLoggedIn = true;
     }
+  }
+
+  logOut() {
+    this.user = {
+      username: '',
+      password: '',
+    };
+    this.appComponent.isLoggedIn = false;
   }
 }

@@ -9,7 +9,6 @@ import { AuthService } from './services/auth.service';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  title = 'lemoncode12';
   isLoggedIn: boolean = false;
   currentUser: UserAuth;
 
@@ -20,8 +19,21 @@ export class AppComponent {
     };
   }
 
-  public setIsLoggedIn(isLoggedIn: boolean) {
+  public setIsLoggedIn(
+    isLoggedIn: boolean,
+    username: string,
+    password: string
+  ) {
     this.isLoggedIn = isLoggedIn;
+    this.authService.isLoggedIn = true;
+    this.currentUser = {
+      username: this.authService.currentUser.username,
+      password: this.authService.currentUser.password,
+    };
+  }
+
+  isLogged(): boolean {
+    return this.authService.isLogged();
   }
 
   getUsername(): string {

@@ -1,5 +1,8 @@
-<ul>
-  <li routerLinkActive="selected"><a routerLink="/dashboard">Dashboard</a></li>
-  <li routerLinkActive="selected"><a routerLink="/providers">Providers</a></li>
-  <li routerLinkActive="selected"><a routerLink="/contact">Contact</a></li>
-</ul>
+<mat-toolbar color="primary">
+  <div class="navbar">
+    <a routerLink="/dashboard">Dashboard</a>
+    <a routerLink="/contact">Contact</a>
+    <a routerLink="/login" (click)="logOut()">Logout</a>
+    <span>Hola, {{ username }} </span>
+  </div>
+</mat-toolbar>

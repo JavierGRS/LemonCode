@@ -1,13 +1,25 @@
-<div>
+<mat-card class="login-card">
+  <span>Username: curso</span>
+  <span>Password: angular</span>
+</mat-card>
+
+<mat-card>
   <form #addForm="ngForm">
-    <div>
-      <label>Username </label>
-      <input name="username" [(ngModel)]="user.username">
+    <div class="login-container">
+      <h2>Login</h2>
+      <div class="login-field-container">
+        <mat-form-field appearance="fill">
+          <label>Username </label>
+          <input name="username" [(ngModel)]="user.username">
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+          <label>Password </label>
+          <input name="password" [(ngModel)]="user.password" />
+        </mat-form-field>
+      </div>
+      <button mat-raised-button color="primary" (click)="onLoginSuccess()" type="submit">Login</button>
     </div>
-    <div>
-      <label>Password </label>
-      <input name="password" [(ngModel)]="user.password" />
-    </div>
-    <button (click)="onLoginSuccess()" type="submit">Login</button>
   </form>
-</div>
+
+
+</mat-card>

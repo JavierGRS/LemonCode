@@ -20,8 +20,8 @@ export class AuthService {
     if (username === 'curso' && password === 'angular') {
       localStorage.setItem('currentUser', JSON.stringify(username));
       this.isLoggedIn = true;
-      // this.user.username = username;
-      // this.user.password = password;
+      this.currentUser.username = username;
+      this.currentUser.password = password;
       return true;
     }
     return false;
@@ -33,12 +33,13 @@ export class AuthService {
   }
 
   isLogged(): boolean {
-    if (localStorage.getItem('currentUser') == null) {
-      this.isLoggedIn = false;
-      return this.isLoggedIn;
-    } else {
-      return true;
-    }
+    return this.isLoggedIn;
+    // if (localStorage.getItem('currentUser') == null) {
+    //   this.isLoggedIn = false;
+    //   return this.isLoggedIn;
+    // } else {
+    //   return true;
+    // }
   }
 
   getUsername(): string {

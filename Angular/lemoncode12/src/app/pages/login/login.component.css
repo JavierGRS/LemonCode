@@ -1,0 +1,21 @@
+.login-card {
+  background-color: lightblue;
+  display: flex;
+  flex-direction: column;
+  width: auto;
+}
+
+.login-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.login-field-container {
+  display: flex;
+  flex-direction: column;
+  width: min-content;
+}
+
+.login-container button {
+  width: min-content;
+}

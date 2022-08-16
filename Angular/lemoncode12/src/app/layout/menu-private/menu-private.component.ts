@@ -24,6 +24,7 @@ export class MenuPrivateComponent implements OnInit {
   ngOnInit(): void {}
 
   logOut() {
+    this.authService.logout();
     this.appComponent.setIsLoggedIn(false, '', '');
     this.router.navigate(['/login']);
   }

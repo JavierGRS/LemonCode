@@ -4,8 +4,8 @@
 
 
 
-<app-menu-private *ngIf="isLoggedIn"></app-menu-private>
-<app-menu-public *ngIf="!isLoggedIn"></app-menu-public>
+<app-menu-private *ngIf="isLogged()"></app-menu-private>
+<app-menu-public *ngIf="!isLogged()"></app-menu-public>
 <div class="container">
   <mat-card>
     <router-outlet></router-outlet>

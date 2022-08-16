@@ -33,13 +33,13 @@ export class AuthService {
   }
 
   isLogged(): boolean {
-    return this.isLoggedIn;
-    // if (localStorage.getItem('currentUser') == null) {
-    //   this.isLoggedIn = false;
-    //   return this.isLoggedIn;
-    // } else {
-    //   return true;
-    // }
+    if (localStorage.getItem('currentUser') == null) {
+      this.isLoggedIn = false;
+      return this.isLoggedIn;
+    } else {
+      this.isLoggedIn = true;
+      return this.isLoggedIn;
+    }
   }
 
   getUsername(): string {

@@ -1,6 +1,9 @@
 <template>
+  <div>
+    <input v-model="keyword" placeholder="keyword" />
+  </div>
   <ul class="user-list">
-    <li v-for="user in userList" :key="user.id">
+    <li v-for="user in filteredList" :key="user.id">
       <router-link :to="`/detail/${user.id}`">
         <div class="user-container-content">
           <p>
@@ -20,17 +23,30 @@
 <script lang="ts">
 import { userService } from '@/services/users'
 import type { User } from '@/types'
+import { computed } from '@vue/reactivity'
 import { defineComponent, ref, type Ref } from 'vue'
 
 export default defineComponent({
   name: 'UserList',
   async setup() {
     const userList: Ref<User[]> = ref([])
-    userList.value = await userService.get()
+    const keyword: Ref<String> = ref("")
+
+    userList.value = await userService.get("lemoncode")
+
+    const filteredList = computed<User[]>(() => {
+      return userList.value.filter((user) => {
+        return user.login.toLowerCase().includes(keyword.value.toLowerCase())
+      })
+    })
+
     return {
       userList,
+      keyword,
+      filteredList
     }
   },
+
 })
 </script>
 

@@ -1,4 +1,7 @@
 <template>
+    <div class="user-error" v-if="user.id == undefined">
+        <h1>User not found</h1>
+    </div>
     <div class="grid-user">
         <div v-if="user">
             <div class="user-avatar">
@@ -33,17 +36,26 @@ export default defineComponent({
         },
     },
     created() {
-        console.log(this.id)
-        userService.getUser(this.id).then((user: User | undefined) => {
-            if (user) {
-                this.user = user
-            }
-        })
+        try {
+            userService.getUser(this.id).then((user: User | undefined) => {
+                if (user) {
+                    this.user = user
+                }
+            })
+        } catch (e) {
+            console.log(e)
+        }
     }
 })
 </script>
 
 <style lang="scss" scoped>
+.user-error {
+    h1 {
+        color: red;
+    }
+}
+
 .grid-user {
     margin-left: 10px;
 }

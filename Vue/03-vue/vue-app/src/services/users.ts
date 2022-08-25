@@ -1,21 +1,24 @@
-import type { User } from '@/types'
+import type { User } from "@/types";
 
 export const userService = {
-  async get(): Promise<User[]> {
+  async get(filter: string = ""): Promise<User[]> {
     const members: User[] = await fetch(
-      `https://api.github.com/orgs/lemoncode/members`
+      `https://api.github.com/orgs/${filter}/members`
       // {
       //   headers: {
       //     Accept: 'application/json',
       //   },
       // }
-    ).then((response) => response.json())
-    return members
+    ).then((response) => response.json());
+    return members;
   },
-  async getUser(id: User['id']): Promise<User | undefined> {
-    if (!id) throw new Error('id is required')
+  async getUser(
+    id: User["id"],
+    filter: string = ""
+  ): Promise<User | undefined> {
+    if (!id) throw new Error("id is required");
     return this.get().then((list) => {
-      return list.find((user: User) => String(user.id) === String(id))
-    })
+      return list.find((user: User) => String(user.id) === String(id));
+    });
   },
-}
+};

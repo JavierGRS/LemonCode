@@ -1,7 +1,9 @@
 <template>
+  <button @click="onClick">Search </button>
+  <input type="text" v-model="keyWord" />
   <ul class="user-list">
     <li v-for="user in userList" :key="user.id">
-      <router-link :to="`/detail/${user.id}`">
+      <router-link :to="`/detail/${keyWord}/${user.id}`">
         <div class="user-container-content">
           <p>
             <span class="grey-text">Name: </span>
@@ -26,9 +28,19 @@ export default defineComponent({
   name: 'UserList',
   async setup() {
     const userList: Ref<User[]> = ref([])
-    userList.value = await userService.get()
+    const keyWord: Ref<String> = ref("Lemoncode")
+    console.log(await userService.get(keyWord.value))
+    userList.value = await userService.get(keyWord.value)
+
+    const onClick = async () => {
+      userList.value = await userService.get(keyWord.value)
+      console.log(userList.value)
+    }
+
     return {
       userList,
+      onClick,
+      keyWord,
     }
   },
 })

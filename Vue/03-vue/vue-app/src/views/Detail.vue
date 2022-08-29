@@ -25,9 +25,12 @@ export default defineComponent({
         id(): string {
             return String(this.$route.params.id)
         },
+        organisation(): string {
+            return String(this.$route.params.organisation)
+        }
     },
     created() {
-        userService.getUser(this.id).then((user: User | undefined) => {
+        userService.getUser(this.id, this.organisation).then((user: User | undefined) => {
             if (user) {
                 this.user = user
             }

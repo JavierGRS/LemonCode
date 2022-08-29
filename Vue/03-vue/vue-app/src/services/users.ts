@@ -4,12 +4,11 @@ export const userService = {
   async get(organisation: String): Promise<User[]> {
     const members: User[] = await fetch(
       `https://api.github.com/orgs/${organisation}/members`
-      // {
-      //   headers: {
-      //     Accept: 'application/json',
-      //   },
-      // }
-    ).then((response) => response.json());
+    )
+      .then((response) => response.json())
+      .catch((err) => {
+        throw new Error(err.message);
+      });
     return members;
   },
   async getUser(

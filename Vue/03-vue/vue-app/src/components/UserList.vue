@@ -1,9 +1,10 @@
 <template>
   <button @click="onClick">Search </button>
-  <input type="text" v-model="keyWord" />
+  <input type="text" v-model="store.state.keyword" />
+  <div v-if="!userList"> Organisation not found</div>
   <ul class="user-list">
     <li v-for="user in userList" :key="user.id">
-      <router-link :to="`/detail/${keyWord}/${user.id}`">
+      <router-link :to="`/detail/${store.state.keyword}/${user.id}`">
         <div class="user-container-content">
           <p>
             <span class="grey-text">Name: </span>
@@ -22,25 +23,25 @@
 <script lang="ts">
 import { userService } from '@/services/users'
 import type { User } from '@/types'
-import { defineComponent, ref, type Ref } from 'vue'
+import { defineComponent, inject, ref, type Ref } from 'vue'
 
 export default defineComponent({
   name: 'UserList',
   async setup() {
     const userList: Ref<User[]> = ref([])
-    const keyWord: Ref<String> = ref("Lemoncode")
-    console.log(await userService.get(keyWord.value))
-    userList.value = await userService.get(keyWord.value)
+    const store: any = inject('store')
+    userList.value = await userService.get(store.state.keyword)
 
     const onClick = async () => {
-      userList.value = await userService.get(keyWord.value)
+      // userList.value = await userService.get(keyWord.value)
+      userList.value = await userService.get(store.state.keyword)
       console.log(userList.value)
     }
 
     return {
+      store,
       userList,
       onClick,
-      keyWord,
     }
   },
 })

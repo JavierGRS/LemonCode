@@ -38,14 +38,21 @@ export default function MenuDropDown() {
         TransitionComponent={Fade}
       >
         <MenuItem onClick={handleClose} component={Link} href="/members-list">
-          Search List using Button
+          <Typography>Search Github using Button</Typography>
         </MenuItem>
         <MenuItem
           onClick={handleClose}
           component={Link}
           href="/members-debounce-list"
         >
-          <Typography>Search List using Debounce</Typography>
+          <Typography>Search Github using Debounce</Typography>
+        </MenuItem>
+        <MenuItem
+          onClick={handleClose}
+          component={Link}
+          href="/rick-and-morty-list"
+        >
+          <Typography>Search Rick And Morty</Typography>
         </MenuItem>
       </Menu>
     </>

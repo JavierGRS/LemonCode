@@ -1,10 +1,12 @@
 import React from "react";
 import { MembersTable } from "./members-table";
-import { GitHubMembersDebounce } from "./GitHubMembersDebounce";
+import { GitHubMembersDebounce } from "./Components/GitHubMembersDebounce";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import LoginPage from "./login";
 import Navbar from "./Components/Navbar";
 import { Box } from "@mui/system";
+import { RickAndMortyList } from "./RickAndMortyList";
+
 export const App = () => {
   return (
     <>
@@ -22,6 +24,7 @@ export const App = () => {
               path="/members-debounce-list"
               element={<GitHubMembersDebounce />}
             />
+            <Route path="/rick-and-morty-list" element={<RickAndMortyList />} />
           </Routes>
         </Router>
       </Box>

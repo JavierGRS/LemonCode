@@ -1,11 +1,11 @@
 import React from "react";
-import { MembersTable } from "./members-table";
-import { GitHubMembersDebounce } from "./Components/GitHubMembersDebounce";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import LoginPage from "./login";
 import Navbar from "./Components/Navbar";
 import { Box } from "@mui/system";
-import { RickAndMortyList } from "./RickAndMortyList";
+import LoginPage from "./Components/login";
+import { MembersTable } from "./Components/members-table";
+import { GitHubMembersDebounce } from "./Components/GitHubMembersDebounce";
+import { RickAndMortyList } from "./Components/RickAndMortyList";
 
 export const App = () => {
   return (

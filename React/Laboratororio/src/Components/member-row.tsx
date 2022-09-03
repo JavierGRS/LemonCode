@@ -1,5 +1,5 @@
 import React from "react";
-import * as vm from "./member-row.model";
+import * as vm from "../model/member-row.model";
 
 interface Props {
   item: vm.Member;

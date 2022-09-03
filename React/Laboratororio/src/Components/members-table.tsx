@@ -1,6 +1,6 @@
 import React, { useState } from "react";
+import { Member } from "../model/member-row.model";
 import { MemberRow } from "./member-row";
-import { Member } from "./member-row.model";
 
 export const MembersTable = () => {
   const [members, setMembers] = React.useState<Member[]>([]);

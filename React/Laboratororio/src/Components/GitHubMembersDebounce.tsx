@@ -1,11 +1,11 @@
 import { Button, TextField } from "@mui/material";
 import React, { useState } from "react";
 import { useDebounce } from "use-debounce";
-import { MemberRow } from "../member-row";
 import {
   KeyboardArrowDownRounded,
   KeyboardArrowUpRounded,
 } from "@mui/icons-material";
+import { MemberRow } from "./member-row";
 
 const useUsersFiltered = () => {
   const [filter, setFilter] = React.useState("lemoncode");

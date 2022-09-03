@@ -6,6 +6,7 @@ import LoginPage from "./Components/login";
 import { MembersTable } from "./Components/members-table";
 import { GitHubMembersDebounce } from "./Components/GitHubMembersDebounce";
 import { RickAndMortyList } from "./Components/RickAndMortyList";
+import CharacterDetail from "./Components/CharacterDetail";
 
 export const App = () => {
   return (
@@ -25,6 +26,7 @@ export const App = () => {
               element={<GitHubMembersDebounce />}
             />
             <Route path="/rick-and-morty-list" element={<RickAndMortyList />} />
+            <Route path="/character/:id" element={<CharacterDetail />} />
           </Routes>
         </Router>
       </Box>

@@ -3,10 +3,7 @@ import React from 'react';
 import userEvent from '@testing-library/user-event';
 import { ConfirmationDialogComponent } from './confirmation-dialog.component';
 
-//isOpen is false
-//
-
-describe('common/DashboardComponent', () => {
+describe('common/components/ConfirmationDialogComponent', () => {
   it('should not be render when prop isOpen is false', () => {
     // Arrange
     const props = {

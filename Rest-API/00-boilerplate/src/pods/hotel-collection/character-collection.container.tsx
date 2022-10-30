@@ -18,11 +18,11 @@ export const CharacterCollectionContainer = () => {
     history.push(linkRoutes.createCharacter);
   };
 
-  const handleEdit = (id: string) => {
+  const handleEdit = (id: number) => {
     history.push(linkRoutes.editCharacter(id));
   };
 
-  const handleDelete = async (id: string) => {
+  const handleDelete = async (id: number) => {
     await deleteCharacter(id);
     loadCharacterCollection();
   };

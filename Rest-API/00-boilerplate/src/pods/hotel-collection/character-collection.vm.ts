@@ -1,8 +1,11 @@
 export interface CharacterEntityVm {
-  id: string;
-  picture: string;
+  id: number;
   name: string;
-  description: string;
-  rating: number;
-  address: string;
+  url: string;
+  created: string;
+  status: 'Dead' | 'Alive' | 'unknown';
+  species: string;
+  type: string;
+  gender: 'Female' | 'Male' | 'Genderless' | 'unknown';
+  image: string;
 }

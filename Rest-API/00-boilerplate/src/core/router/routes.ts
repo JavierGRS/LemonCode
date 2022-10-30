@@ -14,7 +14,7 @@ export const switchRoutes: SwitchRoutes = {
   editCharacter: '/characters/:id',
 };
 
-type NavigationFunction = (id: string) => string;
+type NavigationFunction = (id: number) => string;
 
 interface LinkRoutes extends Omit<SwitchRoutes, 'editCharacter'> {
   editCharacter: NavigationFunction;

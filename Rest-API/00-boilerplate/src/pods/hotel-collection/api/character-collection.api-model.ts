@@ -9,6 +9,15 @@ export interface Character extends ResourceBase {
   episode: string[];
 }
 
+export interface CharactersResult {
+  characters: {
+    info: {
+      count: number;
+      pages: number;
+    };
+    results: Character[];
+  };
+}
 export interface CharacterLocation {
   name: string;
   url: string;

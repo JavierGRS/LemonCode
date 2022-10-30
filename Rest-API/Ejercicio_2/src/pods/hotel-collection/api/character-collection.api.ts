@@ -3,7 +3,8 @@ import { Character, CharactersResult } from './character-collection.api-model';
 import { mockCharacterCollection } from './character-collection.mock-data';
 let characterCollection = [...mockCharacterCollection];
 
-const url = 'https://rickandmortyapi.com/api/character';
+// const url = 'https://rickandmortyapi.com/api/character';
+const url = 'http://localhost:3000/characters';
 
 export const getCharacterCollection = async (): Promise<Character[]> => {
   const { data } = await Axios.get<CharactersResult[]>(url);

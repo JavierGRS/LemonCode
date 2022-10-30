@@ -32,6 +32,7 @@ export const CharacterContainer: React.FunctionComponent = (props) => {
     if (id) {
       handleLoadCharacter();
     }
+    console.log(character);
     handleLoadCityCollection();
   }, []);
 

@@ -1,18 +1,18 @@
 export interface Character {
-  id: string;
+  id: number;
   name: string;
-  description: string;
-  rating: number;
-  address: string;
-  city: string;
+  bestSentences: string;
+  status: 'Dead' | 'Alive' | 'unknown';
+  species: string;
+  type: string;
 }
 
 //Aqui voy a querer solo el character sin todo lo demas
 export const createEmptyCharacter = (): Character => ({
-  id: '',
+  id: null,
   name: '',
-  description: '',
-  rating: 3,
-  address: '',
-  city: '',
+  status: 'unknown',
+  species: '',
+  type: '',
+  bestSentences: '',
 });

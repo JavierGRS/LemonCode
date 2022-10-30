@@ -1,4 +1,4 @@
-export interface Hotel {
+export interface Character {
   id: string;
   type: string;
   name: string;
@@ -12,9 +12,9 @@ export interface Hotel {
   countryCode: string;
   deepLink: string;
   highRate: number;
-  hotelId: number;
-  hotelInDestination: boolean;
-  hotelRating: number;
+  characterId: number;
+  characterInDestination: boolean;
+  characterRating: number;
   location: {
     latitude: number;
     longitude: number;

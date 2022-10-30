@@ -1,4 +1,4 @@
-export interface Hotel {
+export interface Character {
   id: string;
   name: string;
   description: string;
@@ -7,7 +7,8 @@ export interface Hotel {
   city: string;
 }
 
-export const createEmptyHotel = (): Hotel => ({
+//Aqui voy a querer solo el character sin todo lo demas
+export const createEmptyCharacter = (): Character => ({
   id: '',
   name: '',
   description: '',

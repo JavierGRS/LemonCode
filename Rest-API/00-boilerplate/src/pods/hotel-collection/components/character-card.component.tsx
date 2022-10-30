@@ -10,42 +10,42 @@ import Avatar from '@material-ui/core/Avatar/Avatar';
 import IconButton from '@material-ui/core/IconButton/IconButton';
 import EditIcon from '@material-ui/icons/Edit';
 import DeleteIcon from '@material-ui/icons/Delete';
-import { HotelEntityVm } from '../hotel-collection.vm';
-import * as classes from './hotel-card.styles';
+import { CharacterEntityVm } from '../character-collection.vm';
+import * as classes from './character-card.styles';
 
 interface Props {
-  hotel: HotelEntityVm;
+  character: CharacterEntityVm;
   onEdit: (id: string) => void;
   onDelete: (id: string) => void;
 }
 
-export const HotelCard: React.FunctionComponent<Props> = (props) => {
-  const { hotel, onEdit, onDelete } = props;
+export const CharacterCard: React.FunctionComponent<Props> = (props) => {
+  const { character, onEdit, onDelete } = props;
 
   return (
     <Card>
       <CardHeader
-        avatar={<Avatar aria-label="Hotel">{hotel.rating}</Avatar>}
-        title={hotel.name}
-        subheader={hotel.address}
+        avatar={<Avatar aria-label="Character">{character.rating}</Avatar>}
+        title={character.name}
+        subheader={character.address}
       />
       <CardContent>
         <div className={classes.content}>
           <CardMedia
-            image={hotel.picture}
-            title={hotel.name}
+            image={character.picture}
+            title={character.name}
             style={{ height: 0, paddingTop: '56.25%' }}
           />
           <Typography variant="subtitle1" gutterBottom>
-            {hotel.description}
+            {character.description}
           </Typography>
         </div>
       </CardContent>
       <CardActions>
-        <IconButton onClick={() => onEdit(hotel.id)}>
+        <IconButton onClick={() => onEdit(character.id)}>
           <EditIcon />
         </IconButton>
-        <IconButton onClick={() => onDelete(hotel.id)}>
+        <IconButton onClick={() => onDelete(character.id)}>
           <DeleteIcon />
         </IconButton>
       </CardActions>

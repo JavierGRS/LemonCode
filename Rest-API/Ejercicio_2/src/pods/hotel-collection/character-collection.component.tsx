@@ -23,7 +23,6 @@ export const CharacterCollectionComponent: React.FunctionComponent<Props> = (
       </Button>
 
       <ul className={classes.list}>
-        {console.log(characterCollection)}
         {characterCollection.map((character) => (
           <li key={character.id}>
             <CharacterCard

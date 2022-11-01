@@ -7,6 +7,7 @@ export interface Character extends ResourceBase {
   location: CharacterLocation;
   image: string;
   episode: string[];
+  bestSentences: string;
 }
 
 export interface CharactersResult {

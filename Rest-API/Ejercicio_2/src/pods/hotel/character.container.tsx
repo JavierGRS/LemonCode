@@ -32,12 +32,12 @@ export const CharacterContainer: React.FunctionComponent = (props) => {
     if (id) {
       handleLoadCharacter();
     }
-    console.log(character);
     handleLoadCityCollection();
   }, []);
 
   const handleSave = async (character: Character) => {
     const apiCharacter = mapCharacterFromVmToApi(character);
+    console.log(apiCharacter);
     const success = await api.saveCharacter(apiCharacter);
     if (success) {
       history.goBack();

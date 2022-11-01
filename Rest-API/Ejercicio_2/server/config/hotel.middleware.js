@@ -2,8 +2,9 @@ const hotelMiddleware = (req, res, next) => {
   if (req.method === 'POST') {
     req.body = {
       ...req.body,
-      // thumbNailUrl: '/thumbnails/new-hotel.jpg',
     };
+  }
+  if (req.method === 'PUT') {
   }
   next();
 };

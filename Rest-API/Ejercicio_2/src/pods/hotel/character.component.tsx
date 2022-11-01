@@ -25,7 +25,7 @@ export const CharacterComponent: React.FunctionComponent<Props> = (props) => {
       onSubmit={onSave}
       initialValues={character}
       enableReinitialize={true}
-      validate={formValidation.validateForm}
+      // validate={formValidation.validateForm}
     >
       {() => (
         <Form className={classes.root}>
@@ -36,7 +36,7 @@ export const CharacterComponent: React.FunctionComponent<Props> = (props) => {
           {/* <RatingComponent name="rating" max={5} /> */}
           {/* <SelectComponent name="city" label="City" items={cities} /> */}
           <TextFieldComponent
-            name="Best Sentences"
+            name="bestSentences"
             label="Best Sentences"
             multiline={true}
             rows={3}

@@ -73,8 +73,8 @@ export const mockCharacterCollection: Character[] = [
     ],
     url: 'https://rickandmortyapi.com/api/character/1',
     created: '2017-11-04T18:48:46.250Z',
+    bestSentences: '',
   },
-
 ];
 
 export const mockCities: Lookup[] = [

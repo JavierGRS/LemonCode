@@ -7,8 +7,8 @@ let characterCollection = [...mockCharacterCollection];
 const url = 'http://localhost:3000/characters';
 
 export const getCharacterCollection = async (): Promise<Character[]> => {
-  const { data } = await Axios.get<CharactersResult[]>(url);
-  const result = data.results as Character[];
+  const { data } = await Axios.get<Character[]>(url);
+  const result = data as Character[];
   return result;
   // return characterCollection;
 };
